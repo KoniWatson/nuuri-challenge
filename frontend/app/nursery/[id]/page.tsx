@@ -8,6 +8,9 @@ async function Details({ params }: { params: { id: string } }) {
   ).then(async (res) => {
     const data = await res.json();
 
+    console.log(data);
+    
+
     return data.filter((nursery: any) => nursery.id.toString() === id)[0];
   });
 
